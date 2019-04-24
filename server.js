@@ -1,3 +1,4 @@
+
 var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
@@ -51,6 +52,10 @@ app.get("/scrape", function(req, res) {
       result.link = $(this)
         .children("a")
         .attr("href");
+      result.img = $(this)
+        .children("img")
+        .children(".card__image__src")
+        .attr("src")    
 
       // Create a new Article using the `result` object built from scraping
       db.Article.create(result)
