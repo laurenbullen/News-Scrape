@@ -4,7 +4,7 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 
 // // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/Huff-Post-Scraper";
 
 mongoose.connect(MONGODB_URI);
 
